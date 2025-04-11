@@ -1,0 +1,10 @@
+pentaho.log
+src/test/resources/solution/system/logs/
+/bin
+/eclipse-bin
+/dist
+/lib
+/.classpath
+/test-lib
+/dev-lib
+/.gitignore
