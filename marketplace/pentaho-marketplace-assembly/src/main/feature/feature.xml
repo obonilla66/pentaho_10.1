@@ -1,0 +1,24 @@
+<features name="${project.artifactId}-repo" xmlns="http://karaf.apache.org/xmlns/features/v1.2.1">
+
+  <feature name="${project.artifactId}" version="${project.version}">
+    <configfile finalname="/etc/pentaho.marketplace.ba.cfg">
+      mvn:org.pentaho/pentaho-marketplace-ba/${project.version}/cfg/pentaho-marketplace-config
+    </configfile>
+
+    <feature>pentaho-requirejs-osgi-manager</feature>
+
+    <feature>cxf-jaxrs</feature>
+
+    <!-- START client side dependencies -->
+    <bundle>pentaho-webjars:mvn:org.webjars.npm/underscore/${underscore.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars.npm/jquery/${jquery.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular/${angular.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-route/${angular.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-sanitize/${angular.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-animate/${angular.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-translate/${angular-translate.version}</bundle>
+    <bundle>pentaho-webjars:mvn:org.webjars.bower/angular-ui-bootstrap-bower/${angular-ui-bootstrap-bower.version}</bundle>
+    <!-- END -->
+  </feature>
+
+</features>

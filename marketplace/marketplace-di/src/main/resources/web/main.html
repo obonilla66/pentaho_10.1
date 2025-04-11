@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  ~ This program is free software; you can redistribute it and/or modify it under the
+  ~ terms of the GNU Lesser General Public License, version 2.1 as published by the Free Software
+  ~ Foundation.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public License along with this
+  ~ program; if not, you can obtain a copy at http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+  ~ or from the Free Software Foundation, Inc.,
+  ~ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU Lesser General Public License for more details.
+  ~
+  ~ Copyright (c) 2015 - 2019 Hitachi Vantara. All rights reserved.
+  -->
+
+<html>
+    <head>
+        <meta http-equiv='x-ua-compatible' content='IE=edge' />
+
+        <title>Marketplace</title>
+
+        <!-- this is important, it provides theming and the base url -->
+        <!-- Requesting webcontext.js one level above to workaround the filter on PDI issue (BACKLOG-17885) -->
+        <!-- Remove '../' when not needed -->
+        <script type="text/javascript" src="../webcontext.js?requireJsOnly=true"></script>
+
+        <link rel="stylesheet" href="css/marketplace.css">
+        <link rel="stylesheet" href="css/globalCrystal.css">
+        <link rel="stylesheet" href="css/bootstrap-namespaced.css">
+
+        <script>
+          require(["pentaho/marketplace"], function(app) {
+            app.init(document);
+          });
+        </script>
+    </head>
+
+<!--[if lt IE 7]>
+    <body class="IE IE6 bootstrap admin-perspective" >
+<![endif]-->
+<!--[if IE 7]>
+    <body class="IE IE7 bootstrap admin-perspective" >
+<![endif]-->
+<!--[if IE 8]>
+    <body class="IE IE8 bootstrap admin-perspective" >
+<![endif]-->
+<!--[if IE 9]>
+    <body class="IE IE9 bootstrap admin-perspective" >
+<![endif]-->
+<!--[if !IE]><!-->
+    <body class="bootstrap admin-perspective" >
+<!--<![endif]-->
+      <div class="wholeContainer">
+        <div data-ng-view></div>
+      </div>
+
+    </body>
+</html>
