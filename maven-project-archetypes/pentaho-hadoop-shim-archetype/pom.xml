@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.hitachivantara.archetypes</groupId>
+    <artifactId>maven-project-archetypes</artifactId>
+    <version>9.4.0.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.hitachivantara.hadoop.shim</groupId>
+  <artifactId>hadoop-shim-archetype-ce</artifactId>
+  <version>9.4.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <archetype-packaging.version>3.0.1</archetype-packaging.version>
+    <maven-archetype-plugin.version>3.0.1</maven-archetype-plugin.version>
+  </properties>
+
+  <developers>
+    <developer>
+      <name>Pentaho BDC Team</name>
+      <email>bdconform.pentaho@hitachivantara.com</email>
+      <roles>
+        <role>creator</role>
+        <role>maintainer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <scm>
+    <developerConnection>scm:git:git@github.com:pentaho/maven-project-archetypes.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  
+  <licenses>
+    <license>
+      <name>The MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <modules>
+    <module>cdh</module>
+    <module>emr</module>
+    <module>hdi</module>
+    <module>hdp</module>
+    <module>mapr</module>
+  </modules>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>${archetype-packaging.version}</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>${maven-archetype-plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
