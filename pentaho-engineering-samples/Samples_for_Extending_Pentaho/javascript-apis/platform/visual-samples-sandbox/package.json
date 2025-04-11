@@ -1,0 +1,10 @@
+{
+  "name": "my-viz-sandbox",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Visualization API sandbox",
+  "license": "MIT",
+  "devDependencies": {
+    "@pentaho/visual-sandbox": "^3.0.0"
+  }
+}

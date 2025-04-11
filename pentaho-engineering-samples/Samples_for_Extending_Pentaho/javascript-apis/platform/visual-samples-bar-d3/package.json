@@ -1,0 +1,49 @@
+{
+  "name": "@pentaho/visual-samples-bar-d3",
+  "version": "0.0.1",
+  "description": "A sample bar chart using the Visualization API and D3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pentaho/pentaho-engineering-samples.git"
+  },
+  "license": "Apache-2.0",
+  "paths": {
+    "pentaho/visual/samples/barD3": "/"
+  },
+  "config": {
+    "pentaho/modules": {
+      "pentaho/visual/samples/barD3/Model": {
+        "base": "pentaho/visual/Model",
+        "annotations": {
+          "pentaho/visual/DefaultView": {
+            "module": "./View"
+          },
+          "pentaho/theme/Theme": {
+            "main": "css!./css/Model"
+          }
+        }
+      },
+      "pentaho/visual/samples/barD3/View": {
+        "base": null,
+        "annotations": {
+          "pentaho/theme/Theme": {
+            "main": "css!./css/View"
+          },
+          "pentaho/theme/LoadTheme": {}
+        }
+      },
+      "pentaho/visual/samples/barD3/config": {
+        "type": "pentaho/config/spec/IRuleSet"
+      }
+    }
+  },
+  "dependencies": {
+    "d3": "^4.11.0"
+  },
+  "bundleDependencies": [
+    "d3"
+  ],
+  "devDependencies": {
+    "@pentaho/visual-sandbox": "^3.0.0"
+  }
+}
